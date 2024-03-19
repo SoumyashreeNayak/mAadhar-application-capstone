@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [mAadhar-Application-Test-Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="websiteURL" value="http://localhost:4200/"/>
+  <parameter name="driverPath" value="F:\\SELENIUM\\Drivers\chromedriver.exe"/>
+  <parameter name="fileLoc" value="E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\"/>
+  <test thread-count="5" name="mAadhar-Application-Test(failed)">
+    <classes>
+      <class name="gov.app.test.mAadharTestClass">
+        <methods>
+          <include name="setup"/>
+          <include name="AdminLoginTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="CitizenLoginTest3" invocation-numbers="0"/>
+          <include name="AdminRegsitrationTestValid" invocation-numbers="0"/>
+          <include name="CitizenLoginTest1" invocation-numbers="0"/>
+          <include name="CitizenLoginTest2" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- gov.app.test.mAadharTestClass -->
+    </classes>
+  </test> <!-- mAadhar-Application-Test(failed) -->
+</suite> <!-- Failed suite [mAadhar-Application-Test-Suite] -->

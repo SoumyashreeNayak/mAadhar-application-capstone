@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>TestNG:  mAadhar-Application-Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>mAadhar-Application-Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Aug 04 01:13:37 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>62 seconds (62111 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='gov.app.test.mAadharTestClass.UserRegsitrationTestInvalid()'><b>UserRegsitrationTestInvalid</b><br>Test class: gov.app.test.mAadharTestClass<br>Parameters: E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\<br/>
+<a href="#Output-1727424614" onClick='toggleBox("Output-1727424614", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1727424614" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1727424614">
+Reached Registration Page<br/>
+Using Existing email/mobile...<br/>
+Citizen not Registered<br/>
+Reached Home..<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>gov.app.test.mAadharTestClass@53aac487</td></tr>
+<tr>
+<td title='gov.app.test.mAadharTestClass.CitizenLoginTest1()'><b>CitizenLoginTest1</b><br>Test class: gov.app.test.mAadharTestClass<br>Parameters: E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\<br/>
+<a href="#Output-1315081042" onClick='toggleBox("Output-1315081042", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1315081042" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1315081042">
+Reached Login Page<br/>
+Logged in successfully!<br/>
+Viewing Status<br/>
+Logging out<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>gov.app.test.mAadharTestClass@53aac487</td></tr>
+<tr>
+<td title='gov.app.test.mAadharTestClass.HomePageTest()'><b>HomePageTest</b><br>Test class: gov.app.test.mAadharTestClass<br>Parameters: http://localhost:4200/, E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\<br/>
+<a href="#Output-701166114" onClick='toggleBox("Output-701166114", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-701166114" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-701166114">
+Page load time: 721 milliseconds<br/>
+Reached Home page <br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>gov.app.test.mAadharTestClass@53aac487</td></tr>
+<tr>
+<td title='gov.app.test.mAadharTestClass.AdminRegsitrationTestValid()'><b>AdminRegsitrationTestValid</b><br>Test class: gov.app.test.mAadharTestClass<br>Parameters: E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\<br/>
+<a href="#Output-559998250" onClick='toggleBox("Output-559998250", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-559998250" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-559998250">
+Reached Registration Page<br/>
+Admin Successfully Registered<br/>
+Reached Home..<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>gov.app.test.mAadharTestClass@53aac487</td></tr>
+<tr>
+<td title='gov.app.test.mAadharTestClass.UserRegsitrationTestValid()'><b>UserRegsitrationTestValid</b><br>Test class: gov.app.test.mAadharTestClass<br>Parameters: E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\<br/>
+<a href="#Output-1821010113" onClick='toggleBox("Output-1821010113", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1821010113" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1821010113">
+Reached Registration Page<br/>
+Citizen Successfully Registered<br/>
+Reached Home..<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>gov.app.test.mAadharTestClass@53aac487</td></tr>
+<tr>
+<td title='gov.app.test.mAadharTestClass.AdminLoginTest()'><b>AdminLoginTest</b><br>Test class: gov.app.test.mAadharTestClass<br>Parameters: E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\<br/>
+<a href="#Output-1798861270" onClick='toggleBox("Output-1798861270", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1798861270" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1798861270">
+Reached Login Page<br/>
+Logged in successfully!<br/>
+Approving Citizen for Aadhar... Generating Aadhar Number<br/>
+Rejecting Citizen for Aadhar...<br/>
+Marking Dead Citizen<br/>
+Logging out<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>gov.app.test.mAadharTestClass@53aac487</td></tr>
+<tr>
+<td title='gov.app.test.mAadharTestClass.CitizenLoginTest2()'><b>CitizenLoginTest2</b><br>Test class: gov.app.test.mAadharTestClass<br>Parameters: E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\<br/>
+<a href="#Output-113416412" onClick='toggleBox("Output-113416412", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-113416412" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-113416412">
+Reached Login Page<br/>
+Logged in successfully!<br/>
+Viewing Status<br/>
+Logging out<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>gov.app.test.mAadharTestClass@53aac487</td></tr>
+<tr>
+<td title='gov.app.test.mAadharTestClass.CitizenLoginTest3()'><b>CitizenLoginTest3</b><br>Test class: gov.app.test.mAadharTestClass<br>Parameters: E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\<br/>
+<a href="#Output-889753223" onClick='toggleBox("Output-889753223", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-889753223" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-889753223">
+Reached Login Page<br/>
+Logged in successfully!<br/>
+Viewing Status<br/>
+Logging out<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>gov.app.test.mAadharTestClass@53aac487</td></tr>
+</table><p>
+</body>
+</html>

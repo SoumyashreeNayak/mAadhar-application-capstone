@@ -1,0 +1,144 @@
+<div style="height: 100vh">
+  <span *ngIf="showDashboard; then Dashboard; else LoginForm"></span>
+  <ng-template #Dashboard>
+    <div style="display: flex; justify-content: flex-end">
+      <div>
+        <div> <button type="submit" class="btn btn-success" (click)="home()">
+          Main Page
+        </button></div>
+      </div>
+      <div> <button type="submit" class="btn btn-danger" (click)="logout()">
+        Logout
+      </button></div>
+     
+    </div>
+    <h1 style="text-align: center">Welcome,{{ admin.adminName }}!</h1>
+    <div *ngIf="message2=='Citizen Marked as not Alive'" ><h2 style="color: red;text-align: center;">{{message2}}</h2></div>
+    <div *ngIf="btn_area">
+      <div class="d-grid gap-4 col-3 mx-auto">
+        <button
+          class="btn btn-success"
+          type="button"
+          (click)="showWaitingCitizens()"
+        >
+          View Waiting Citizens
+        </button>
+        <button
+          class="btn btn-success"
+          type="button"
+          (click)="showDeadCitizens()"
+        >
+          Update Dead Citizens
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="wait_area">
+      <h2 style="text-align: center">List of Waiting Citizens</h2>
+      <table class="table table-info">
+        <thead>
+          <tr>
+            <th>Citizen ID</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Mobile No</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Approve</th>
+            <th>Reject</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let waitingCitizen of waitingCitizens">
+            <td>{{ waitingCitizen.id }}</td>
+            <td>{{ waitingCitizen.name }}</td>
+            <td>{{ waitingCitizen.dob | date : "dd-MMM-YYYY" }}</td>
+            <td>{{ waitingCitizen.emailId }}</td>
+            <td>{{ waitingCitizen.mobileNo }}</td>
+            <td>{{ waitingCitizen.address }}</td>
+            <td>{{ waitingCitizen.gender }}</td>
+            <td>
+              <button
+                type="submit"
+                class="btn btn-success"
+                (click)="approve(waitingCitizen.emailId)"
+              >
+                Approve
+              </button>
+            </td>
+            <td>
+              <button
+                type="submit"
+                class="btn btn-danger"
+                (click)="reject(waitingCitizen.emailId)"
+              >
+                Reject
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div *ngIf="notAlive_area">
+      <h2 style="text-align: center">Update Dead Citizens</h2>
+      <div *ngIf="message2=='Invalid email!'"><h2 style="text-align: center;color: red;">{{message2}}</h2></div>
+      <div class="col-5">
+        <div class="mb-3">
+          <h3>Enter email ID of Dead Citizen</h3>
+        </div>
+        <form>
+          <div class="col-sm-8">
+            Email
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              id="email"
+              [(ngModel)]="emailToRem"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-danger" (click)="update()">
+            Mark as Dead
+          </button>
+        </form>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #LoginForm>
+    <h1 style="line-height: 2em; text-align: center">Login as Admin</h1>
+    <h4 style="text-align: center; color: red">{{ message }}</h4>
+    <div class="col-sm-3" style="margin: auto">
+      <form name="regForm">
+        <div class="form-group">
+          <label>Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            [(ngModel)]="admin.email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          Password
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            [(ngModel)]="admin.password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-dark" (click)="loginAsAdmin()">
+          Login
+        </button>
+      </form>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,162 @@
+<div style="height: 100vh">
+  <span *ngIf="showRegHome; then RegHome; else RegForm"></span>
+  <ng-template #RegHome>
+    <div *ngIf="message != ''">
+      <h1 style="color: green; text-align: center">{{ message }}</h1>
+    </div>
+    <h1 style="line-height: 2em; text-align: center">
+      Select appropriate Registration
+    </h1>
+    <div class="d-grid gap-4 col-3 mx-auto">
+      <button class="btn btn-success" type="button" (click)="showsAdminForm()">
+        Register as Admin
+      </button>
+      <button
+        class="btn btn-success"
+        type="button"
+        (click)="showsCitizenForm()"
+      >
+        Register as Citizen
+      </button>
+    </div>
+  </ng-template>
+  <ng-template #RegForm>
+    <div *ngIf="showAdminForm">
+      <div *ngIf="message != ''">
+        <h1 style="color: red; text-align: center">{{ message }}</h1>
+      </div>
+      <!-- Admin Registration -->
+      <div class="col-sm-7" style="margin: auto">
+        <h1 style="text-align: center;">Admin Registration</h1>
+        <form (ngSubmit)="registerAdmin()" [formGroup]="adminForm">
+          <div class="form-group">
+            <label>Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="adminName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="email"
+              required
+            />
+            <div *ngIf="adminForm.get('email')?.errors?.['required']">
+              <span style="color: red">*Email is required</span>
+            </div>
+            <div *ngIf="adminForm.get('email')?.errors?.['email']">
+              <span style="color: red">*Invalid email format</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password"
+              required
+              minlength="6"
+            />
+            <div *ngIf="adminForm.get('password')?.errors?.['required']">
+              <span style="color: red">* Password is required</span>
+            </div>
+            <div *ngIf="adminForm.get('password')?.errors?.['minlength']">
+              <span style="color: red"
+                >* Password should be at least 6 characters long</span
+              >
+            </div>
+            <div *ngIf="adminForm.get('password')?.errors?.['invalidPassword']">
+              <span style="color: red"
+                >* Password should contain at least 1 upper case, 1 lower case, 1
+                number, and 1 special character</span
+              >
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+      </div>
+    </div>
+    <div *ngIf="showCitizenForm">
+      <!-- Citizen Registration -->
+      <div class="col-sm-6" style="margin: auto">
+        <h1 style="text-align: center;">Citizen Registration</h1>
+        <form (ngSubmit)="registerCitizen()" [formGroup]="citizenForm">
+          <div class="form-group">
+            <label>Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="emailId"
+              required
+            />
+            <div *ngIf="citizenForm.get('emailId')?.errors?.['required']">
+              <span style="color: red">* Email is required</span>
+            </div>
+            <div *ngIf="citizenForm.get('emailId')?.errors?.['email']">
+              <span style="color: red">* Invalid email format</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Mobile</label>
+            <input
+              type="tel"
+              class="form-control"
+              formControlName="mobileNo"
+              required
+              pattern="[0-9]{10}"
+            />
+            <div *ngIf="citizenForm.get('mobileNo')?.errors?.['required']">
+              <span style="color: red">* Mobile number is required</span>
+            </div>
+            <div *ngIf="citizenForm.get('mobileNo')?.errors?.['pattern']">
+              <span style="color: red"
+                >* Mobile number should be 10 digits long and contain only
+                digits</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Address</label>
+            <textarea
+              class="form-control"
+              formControlName="address"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label>Gender</label>
+            <select class="form-control" formControlName="gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Date of Birth</label>
+            <input
+              type="date"
+              class="form-control"
+              formControlName="dob"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+      </div>
+    </div>
+  </ng-template>
+</div>

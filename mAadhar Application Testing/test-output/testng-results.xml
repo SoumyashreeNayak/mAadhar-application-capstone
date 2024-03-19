@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Page load time: 721 milliseconds]]>
+    </line>
+    <line>
+      <![CDATA[Reached Home page ]]>
+    </line>
+    <line>
+      <![CDATA[Reached Registration Page]]>
+    </line>
+    <line>
+      <![CDATA[Using Existing email/mobile...]]>
+    </line>
+    <line>
+      <![CDATA[Citizen not Registered]]>
+    </line>
+    <line>
+      <![CDATA[Reached Home..]]>
+    </line>
+    <line>
+      <![CDATA[Reached Registration Page]]>
+    </line>
+    <line>
+      <![CDATA[Citizen Successfully Registered]]>
+    </line>
+    <line>
+      <![CDATA[Reached Home..]]>
+    </line>
+    <line>
+      <![CDATA[Reached Registration Page]]>
+    </line>
+    <line>
+      <![CDATA[Admin Successfully Registered]]>
+    </line>
+    <line>
+      <![CDATA[Reached Home..]]>
+    </line>
+    <line>
+      <![CDATA[Reached Login Page]]>
+    </line>
+    <line>
+      <![CDATA[Logged in successfully!]]>
+    </line>
+    <line>
+      <![CDATA[Approving Citizen for Aadhar... Generating Aadhar Number]]>
+    </line>
+    <line>
+      <![CDATA[Rejecting Citizen for Aadhar...]]>
+    </line>
+    <line>
+      <![CDATA[Marking Dead Citizen]]>
+    </line>
+    <line>
+      <![CDATA[Logging out]]>
+    </line>
+    <line>
+      <![CDATA[Reached Login Page]]>
+    </line>
+    <line>
+      <![CDATA[Logged in successfully!]]>
+    </line>
+    <line>
+      <![CDATA[Viewing Status]]>
+    </line>
+    <line>
+      <![CDATA[Logging out]]>
+    </line>
+    <line>
+      <![CDATA[Reached Login Page]]>
+    </line>
+    <line>
+      <![CDATA[Logged in successfully!]]>
+    </line>
+    <line>
+      <![CDATA[Viewing Status]]>
+    </line>
+    <line>
+      <![CDATA[Logging out]]>
+    </line>
+    <line>
+      <![CDATA[Reached Login Page]]>
+    </line>
+    <line>
+      <![CDATA[Logged in successfully!]]>
+    </line>
+    <line>
+      <![CDATA[Viewing Status]]>
+    </line>
+    <line>
+      <![CDATA[Logging out]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-08-04T01:13:37 IST" name="mAadhar-Application-Test-Suite" finished-at="2023-08-04T01:14:39 IST" duration-ms="62111">
+    <groups>
+    </groups>
+    <test started-at="2023-08-04T01:13:37 IST" name="mAadhar-Application-Test" finished-at="2023-08-04T01:14:39 IST" duration-ms="62111">
+      <class name="gov.app.test.mAadharTestClass">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:gov.app.test.mAadharTestClass@53aac487]" started-at="2023-08-04T01:13:37 IST" name="setup" finished-at="2023-08-04T01:13:41 IST" duration-ms="3851" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[F:\\SELENIUM\\Drivers\chromedriver.exe]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="HomePageTest(java.lang.String,java.lang.String)[pri:1, instance:gov.app.test.mAadharTestClass@53aac487]" started-at="2023-08-04T01:13:41 IST" name="HomePageTest" finished-at="2023-08-04T01:13:43 IST" duration-ms="2292" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://localhost:4200/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Page load time: 721 milliseconds]]>
+            </line>
+            <line>
+              <![CDATA[Reached Home page ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- HomePageTest -->
+        <test-method signature="UserRegsitrationTestInvalid(java.lang.String)[pri:2, instance:gov.app.test.mAadharTestClass@53aac487]" started-at="2023-08-04T01:13:43 IST" name="UserRegsitrationTestInvalid" finished-at="2023-08-04T01:13:52 IST" duration-ms="8401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Reached Registration Page]]>
+            </line>
+            <line>
+              <![CDATA[Using Existing email/mobile...]]>
+            </line>
+            <line>
+              <![CDATA[Citizen not Registered]]>
+            </line>
+            <line>
+              <![CDATA[Reached Home..]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UserRegsitrationTestInvalid -->
+        <test-method signature="UserRegsitrationTestValid(java.lang.String)[pri:3, instance:gov.app.test.mAadharTestClass@53aac487]" started-at="2023-08-04T01:13:52 IST" name="UserRegsitrationTestValid" finished-at="2023-08-04T01:13:59 IST" duration-ms="7817" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Reached Registration Page]]>
+            </line>
+            <line>
+              <![CDATA[Citizen Successfully Registered]]>
+            </line>
+            <line>
+              <![CDATA[Reached Home..]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UserRegsitrationTestValid -->
+        <test-method signature="AdminRegsitrationTestValid(java.lang.String)[pri:4, instance:gov.app.test.mAadharTestClass@53aac487]" started-at="2023-08-04T01:13:59 IST" name="AdminRegsitrationTestValid" finished-at="2023-08-04T01:14:07 IST" duration-ms="7574" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Reached Registration Page]]>
+            </line>
+            <line>
+              <![CDATA[Admin Successfully Registered]]>
+            </line>
+            <line>
+              <![CDATA[Reached Home..]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AdminRegsitrationTestValid -->
+        <test-method signature="AdminLoginTest(java.lang.String)[pri:5, instance:gov.app.test.mAadharTestClass@53aac487]" started-at="2023-08-04T01:14:07 IST" name="AdminLoginTest" finished-at="2023-08-04T01:14:18 IST" duration-ms="11403" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Reached Login Page]]>
+            </line>
+            <line>
+              <![CDATA[Logged in successfully!]]>
+            </line>
+            <line>
+              <![CDATA[Approving Citizen for Aadhar... Generating Aadhar Number]]>
+            </line>
+            <line>
+              <![CDATA[Rejecting Citizen for Aadhar...]]>
+            </line>
+            <line>
+              <![CDATA[Marking Dead Citizen]]>
+            </line>
+            <line>
+              <![CDATA[Logging out]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AdminLoginTest -->
+        <test-method signature="CitizenLoginTest1(java.lang.String)[pri:6, instance:gov.app.test.mAadharTestClass@53aac487]" started-at="2023-08-04T01:14:18 IST" name="CitizenLoginTest1" finished-at="2023-08-04T01:14:25 IST" duration-ms="6753" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Reached Login Page]]>
+            </line>
+            <line>
+              <![CDATA[Logged in successfully!]]>
+            </line>
+            <line>
+              <![CDATA[Viewing Status]]>
+            </line>
+            <line>
+              <![CDATA[Logging out]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CitizenLoginTest1 -->
+        <test-method signature="CitizenLoginTest2(java.lang.String)[pri:7, instance:gov.app.test.mAadharTestClass@53aac487]" started-at="2023-08-04T01:14:25 IST" name="CitizenLoginTest2" finished-at="2023-08-04T01:14:32 IST" duration-ms="6627" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Reached Login Page]]>
+            </line>
+            <line>
+              <![CDATA[Logged in successfully!]]>
+            </line>
+            <line>
+              <![CDATA[Viewing Status]]>
+            </line>
+            <line>
+              <![CDATA[Logging out]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CitizenLoginTest2 -->
+        <test-method signature="CitizenLoginTest3(java.lang.String)[pri:8, instance:gov.app.test.mAadharTestClass@53aac487]" started-at="2023-08-04T01:14:32 IST" name="CitizenLoginTest3" finished-at="2023-08-04T01:14:39 IST" duration-ms="6807" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[E:\\STS_WORKSPACE\\mAadhar-Application-Testing\\screenshots\\]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Reached Login Page]]>
+            </line>
+            <line>
+              <![CDATA[Logged in successfully!]]>
+            </line>
+            <line>
+              <![CDATA[Viewing Status]]>
+            </line>
+            <line>
+              <![CDATA[Logging out]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CitizenLoginTest3 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:gov.app.test.mAadharTestClass@53aac487]" started-at="2023-08-04T01:14:39 IST" name="tearDown" finished-at="2023-08-04T01:14:39 IST" duration-ms="438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- gov.app.test.mAadharTestClass -->
+    </test> <!-- mAadhar-Application-Test -->
+  </suite> <!-- mAadhar-Application-Test-Suite -->
+</testng-results>

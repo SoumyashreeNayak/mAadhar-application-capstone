@@ -1,0 +1,85 @@
+<div style="height: 100vh">
+  <span *ngIf="showDashboard; then Dashboard; else LoginForm"></span>
+  <ng-template #Dashboard>
+    <div style="display: flex; justify-content: flex-end">
+      <button type="submit" class="btn btn-danger" (click)="logout()">
+        Logout
+      </button>
+    </div>
+    <h1 style="text-align: center">Welcome,{{ citizen.name }}!</h1>
+    <table class="table table-info">
+      <thead>
+        <tr>
+          <th>Citizen ID</th>
+          <th>Name</th>
+          <th>Date of Birth</th>
+          <th>Email</th>
+          <th>Mobile No</th>
+          <th>Address</th>
+          <th>Gender</th>
+          <th>Aadhar Status</th>
+          <th>More Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ citizen.id }}</td>
+          <td>{{ citizen.name }}</td>
+          <td>{{ citizen.dob | date : "dd-MMM-YYYY" }}</td>
+          <td>{{ citizen.emailId }}</td>
+          <td>{{ citizen.mobileNo }}</td>
+          <td>{{ citizen.address }}</td>
+          <td>{{ citizen.gender }}</td>
+          <td>{{ citizen.status }}</td>
+          <td>
+            <button
+              type="submit"
+              class="btn btn-dark"
+              (click)="getAadharStatus(citizen.emailId, citizen.mobileNo)"
+            >
+              Click Here
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="aadharStatus != ''">
+      <h1 style="color: green; text-align: center">{{ aadharStatus }}</h1>
+    </div>
+  </ng-template>
+
+  <ng-template #LoginForm>
+    <h1 style="line-height: 2em; text-align: center">Login as Citizen</h1>
+    <h4 style="text-align: center; color: red">{{ message }}</h4>
+    <div class="col-sm-3" style="margin: auto">
+      <form name="regForm">
+        <div class="form-group">
+          <label>Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            [(ngModel)]="citizen.emailId"
+            required
+          />
+        </div>
+        <div class="form-group">
+          Password(Your mobile no.)
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            [(ngModel)]="citizen.mobileNo"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-dark" (click)="loginAsCitizen()">
+          Login
+        </button>
+      </form>
+    </div>
+  </ng-template>
+</div>
